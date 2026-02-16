@@ -42,10 +42,10 @@ Goal: Verify the Client can resolve the Server's name to 192.xxx.xxx.x.
 On Ubuntu Client:
 
 1. Test external DNS (checks internet)
-dig google.com
+: dig google.com
 
 2. Test internal "DNS" (checks /etc/hosts mapping)
-ping server.techexapmle.com -c 4
+: ping server.techexapmle.com -c 4
 
 # Phase 2: TCP Handshake
 
@@ -55,10 +55,10 @@ On Rocky Server (Setup):
 Rocky Linux has a strict firewall by default. We must allow port 8000.
 
 - Allow port 8000
-sudo firewall-cmd --add-port=8000/tcp
+: sudo firewall-cmd --add-port=8000/tcp
 
 - Start the Python Web Server
-python3 -m http.server 8000
+: python3 -m http.server 8000
 
 On Ubuntu Client (Execution):
 we will need two terminal windows open on the Ubuntu machine.
@@ -66,10 +66,10 @@ we will need two terminal windows open on the Ubuntu machine.
 Terminal 1 (The Sniffer):
 
 - Listen for traffic specifically between client and the server
-sudo tcpdump -i any host 192.168.xxx.x and port 8000
+: sudo tcpdump -i any host 192.168.xxx.x and port 8000
 
-Terminal 2 (The Actor):
-curl http://server.techexample.com:8000
+Terminal 2 (The Actor)
+: curl http://server.techexample.com:8000
 
 [S] = SYN (Client asking to connect)
 
@@ -84,7 +84,7 @@ Goal: See the actual data (HTML) moving across the wire.
 On Ubuntu Client:
 
 Using the verbose flag (-v) to see the HTTP headers clearly
-curl -v http://server.techgroup.com:8000
+: curl -v http://server.techgroup.com:8000
 On Rocky Server:
 Watching a log entry appear:
 
@@ -94,17 +94,17 @@ Watching a log entry appear:
 
 
 # View security logs (ssh logins, sudo usage)
-sudo tail -f /var/log/secure
+: sudo tail -f /var/log/secure
 Drill (Firewall Test on Rocky):
 
  1. On Rocky Server, block the Client IP
-sudo firewall-cmd --add-rich-rule='rule family="ipv4" source address="192.168.200.80" reject'
+: sudo firewall-cmd --add-rich-rule='rule family="ipv4" source address="192.168.200.80" reject'
 
  2. On Ubuntu Client, try to connect
-curl http://server.techgroup.com:8000
+: curl http://server.techgroup.com:8000
  (It will say "Connection refused")
 
 <img width="1144" height="101" alt="Connection refused" src="https://github.com/user-attachments/assets/a3790e4d-9f12-42f6-af85-9fcded23ac9f" />
 
 3. On Rocky Server, remove the block to fix it
-sudo firewall-cmd --reload
+: sudo firewall-cmd --reload
