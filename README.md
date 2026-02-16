@@ -2,6 +2,7 @@
 # Overview
 This repository documents a hands-on networking experiment conducted in a controlled Ubuntu client–server environment.
 The objective was to move beyond theory and analyze end-to-end network communication at the packet, protocol, and system levels, while introducing controlled failures to strengthen troubleshooting capability.
+
 The experiment covers:
 1. DNS resolution
 2. TCP 3-way handshake
