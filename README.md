@@ -3,12 +3,12 @@
 This repository documents a hands-on networking experiment conducted in a controlled Ubuntu client–server environment.
 The objective was to move beyond theory and analyze end-to-end network communication at the packet, protocol, and system levels, while introducing controlled failures to strengthen troubleshooting capability.
 The experiment covers:
-- DNS resolution
-- TCP 3-way handshake
-- HTTP request/response cycle
-- Packet capture and analysis
-- Firewall misconfiguration scenario
-- Root cause identification and remediation
+1. DNS resolution
+2. TCP 3-way handshake
+3. HTTP request/response cycle
+4. Packet capture and analysis
+5. Firewall misconfiguration scenario
+6. Root cause identification and remediation
 
 <img width="1269" height="1741" alt="Ubuntu Client–Server Networking   Firewall Troubleshooting Lab" src="https://github.com/user-attachments/assets/2f198d9b-3b56-47b6-b85f-9228c866c7c1" />
 
