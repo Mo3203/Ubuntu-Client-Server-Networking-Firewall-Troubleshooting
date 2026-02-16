@@ -109,3 +109,14 @@ Drill (Firewall Test on Rocky):
 
 3. On Rocky Server, remove the block to fix it
 : sudo firewall-cmd --reload
+
+# Key Learning Outcomes:
+- Networking is observable, measurable, and diagnosable.
+- Firewall policies operate at defined layers and directly impact transport behavior.
+- Packet-level visibility eliminates guesswork.
+- Structured troubleshooting reduces resolution time and prevents misdiagnosis.
+
+# Conclusion
+This lab bridges the gap between networking theory and operational execution.
+It demonstrates applied knowledge in TCP/IP, Linux systems, firewall management, and packet analysis—combined with structured documentation and visualization.
+The focus is not just connectivity, but controlled failure, observability, and disciplined troubleshooting.
