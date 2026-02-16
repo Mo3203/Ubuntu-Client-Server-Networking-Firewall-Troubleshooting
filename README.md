@@ -1,4 +1,4 @@
-# 🛡 Ubuntu Client–Server Networking & Firewall Troubleshooting Lab
+# 🛡 Ubuntu Client–Server Networking & Firewall Troubleshooting
 # Overview
 This repository documents a hands-on networking lab conducted in a controlled Ubuntu client–server environment.
 The objective was to move beyond theory and analyze end-to-end network communication at the packet, protocol, and system levels, while introducing controlled failures to strengthen troubleshooting capability.
