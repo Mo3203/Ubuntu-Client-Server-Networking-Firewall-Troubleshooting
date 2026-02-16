@@ -84,7 +84,7 @@ Goal: See the actual data (HTML) moving across the wire.
 On Ubuntu Client:
 
 Using the verbose flag (-v) to see the HTTP headers clearly
-: curl -v http://server.techgroup.com:8000
+: curl -v http://server.techexample.com:8000
 On Rocky Server:
 Watching a log entry appear:
 
@@ -98,10 +98,10 @@ Watching a log entry appear:
 Drill (Firewall Test on Rocky):
 
  1. On Rocky Server, block the Client IP
-: sudo firewall-cmd --add-rich-rule='rule family="ipv4" source address="192.168.200.80" reject'
+: sudo firewall-cmd --add-rich-rule='rule family="ipv4" source address="192.xxx.xxx.xx" reject'
 
  2. On Ubuntu Client, try to connect
-: curl http://server.techgroup.com:8000
+: curl http://server.techexample.com:8000
  (It will say "Connection refused")
 
 <img width="1144" height="101" alt="Connection refused" src="https://github.com/user-attachments/assets/a3790e4d-9f12-42f6-af85-9fcded23ac9f" />
